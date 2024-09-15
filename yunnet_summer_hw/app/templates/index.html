@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'style.css') }}">
+    <script src="{{ url_for('static',filename = 'script.js') }}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" id="signin" style="display: block;">
+
+        <div class="title">
+            <div>
+                log in
+            </div>
+        </div>
+
+        <div class="form">
+            <div>
+                <input class="forminput" id="inaccount" placeholder="帳號" required>
+            </div>
+            <div>
+                <input class="forminput" id="inpass" type="password" placeholder="密碼" required>
+            </div>
+            <div>
+                <div class="check" onclick="login()">
+                    確定
+                </div>
+            </div>
+        </div>
+
+        <div class="change">
+            <div class="nohide">
+                <div>登入</div>
+            </div>
+            <div class="hide" onclick="change('#signin','#signup')">
+                <div>註冊</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main" id="signup" style="display: none;">
+
+        <div class="title">
+            <div>
+                sign up
+            </div>
+        </div>
+
+        <div class="upform">
+            <div>
+                <input class="signupin" id="upacc" placeholder="帳號" required>
+            </div>
+            <div>
+                <input class="signupin" id="uppasw" type="password" placeholder="密碼" required>
+            </div>
+            <div>
+                <input class="signupin" id="mail" type="email" placeholder="電子信箱" required>
+            </div>
+            <div>
+                <input class="signupin" id="num" type="tel" placeholder="電話" required>
+            </div>
+            <div>
+                <div class="check" onclick="signup()">
+                    確定
+                </div>
+            </div>
+        </div>
+
+        <div class="change">
+            <div class="hide" onclick="change('#signup','#signin')">
+                <div>登入</div>
+            </div>
+            <div class="nohide">
+                <div>註冊</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
