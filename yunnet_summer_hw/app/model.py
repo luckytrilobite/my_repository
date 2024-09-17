@@ -1,14 +1,19 @@
+#規定資料庫的模型
+
 from sqlalchemy import create_engine, Column, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+#連結資料庫
 connect = "mysql+mysqlconnector://root:Hsbiteh@localhost:3306/yunnetsumdb"
 
+#(我也不懂)
 engine = create_engine(connect, echo=True)
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 dbsession = Session()
 
+#規定資料庫的表格
 class User(Base):
     __tablename__ = 'users'
 
